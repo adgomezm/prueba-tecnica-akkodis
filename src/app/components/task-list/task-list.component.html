@@ -1,0 +1,33 @@
+<div class="boxcontainer">
+  <div class="listcontainer">
+    <h1>Lista de tareas</h1>
+    <div class="list">
+      <mat-card class="task" *ngFor="let task of taskList">
+        <mat-card-header>
+          <mat-card-title
+            >{{ task.Titulo }}
+            {{ task.Completada == true ? "(Completada)" : "" }}</mat-card-title
+          >
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ task.Descripcion }}</p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-raised-button (click)="completeTask(task)">
+            {{
+              task.Completada == true
+                ? "Marcar como pendiente"
+                : "Marcar como completada"
+            }}
+          </button>
+          <button mat-raised-button (click)="deleteTask(task)">
+            Eliminar tarea
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <button mat-raised-button primary (click)="addTask()" class="button">
+      Añadir tarea
+    </button>
+  </div>
+</div>

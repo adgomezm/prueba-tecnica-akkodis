@@ -1,0 +1,40 @@
+.listcontainer {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  justify-content: space-between;
+}
+.boxcontainer {
+  display: flex;
+  align-items: center;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.task {
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 15px;
+  margin: 5px;
+  background-color: #f9aa34;
+  min-width: 400px;
+  max-width: 400px;
+  color: black;
+}
+
+.button {
+  margin: 20px;
+  background-color: #f9aa34;
+}
+
+::ng-deep .mat-card-header-text {
+  margin: 0 !important;
+}

@@ -1,0 +1,18 @@
+<div class="form">
+  <h1>Añadir tarea</h1>
+  <mat-form-field>
+    <mat-label>Título de la tarea</mat-label>
+    <input matInput #input [formControl]="form.controls['titulo']" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Descripción de la tarea</mat-label>
+    <textarea
+      matInput
+      #input
+      [formControl]="form.controls['descripcion']"
+    ></textarea>
+  </mat-form-field>
+  <button mat-button (click)="addTask()" [disabled]="!form.valid">
+    Confirmar
+  </button>
+</div>
